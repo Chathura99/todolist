@@ -10,15 +10,17 @@ const TodoForm = (props) => {
     });
   
     const handleChange = e => {
+      //get input value
       setInput(e.target.value);
     };
   
     const handleSubmit = e => {
-        //to remove refreshing...
+      //to remove refreshing...
       e.preventDefault();
-    // to parent
+    // set parent props
       props.onSubmit({
         id: Math.floor(Math.random() * 1000),
+        //input set by handleChange function in above
         text: input
       });
       //to clear after adding to list

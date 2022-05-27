@@ -16,11 +16,11 @@ const Todo = ({ todos, completeTodo, removeTodo, updateTodo }) => {
           value: ''
         });
       };
-    //when click edit
+    //when edit.id is set return another form
       if (edit.id) {
         return <TodoForm edit={edit} onSubmit={submitUpdate} />;
       }
-    
+    //show all todo
       return todos.map((todo, index) => (
         <div
           className={todo.isComplete ? 'todo-row complete' : 'todo-row'}
@@ -37,6 +37,7 @@ const Todo = ({ todos, completeTodo, removeTodo, updateTodo }) => {
               className='delete-icon'
             />
             <TiEdit
+            //store edit variable by setEdit
               onClick={() => setEdit({ id: todo.id, value: todo.text })}
               className='edit-icon'
             />

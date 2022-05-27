@@ -51,7 +51,9 @@ const TodoList = (props) => {
       {/* pass "onSubmit" as a props to  TodoForm*/}
       <TodoForm onSubmit={addTodo} />
       <Todo
+        //to pass to child
         todos={todos}
+        //get from parent
         completeTodo={completeTodo}
         removeTodo={removeTodo}
         updateTodo={updateTodo}
