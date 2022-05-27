@@ -1,4 +1,5 @@
-##Simple To-Do-List web application created by using react
+## Simple To-Do-List web application created by using react
+
 In the project directory, you can run:
 
 ### `npm start`
